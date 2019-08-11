@@ -1,0 +1,316 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 0.25em;
+    font-size: 4em;
+    font-weight: 900;
+    line-height: 0,9;
+}
+
+p {
+    margin: 0;
+    color: #b2bec3;
+}
+
+a {
+    padding: 0.5em 1em;
+    font-size: 0.8em;
+    color: #b2bec3;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    border: 1px solid #b2bec3;
+    transition: all 0.3s ease-in;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: #dfe6e9;
+    background-color: #b2bec3;
+}
+
+figure {
+    margin: 0;
+}
+
+/* text selection */
+
+::-moz-selection {
+    color: #ffffff;
+    background-color: #d0f2ee;
+    text-shadow: none;
+}
+
+::selection {
+    color: #ffffff;
+    background-color: #d0f2ee;
+    text-shadow: none;
+}
+
+/* -------------- */
+
+body {
+    font-family: source sans pro, sans-serif;
+    font-size: 100%;
+    line-height: 1.6;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+/* -----------------------Break Point---------------------------- */
+/* Gunanya buat mengatur ukuran font ketika lebar display berubah */
+
+@media (min-width: 20em){
+    body {
+        font-size:102.5%;
+    }
+}
+
+@media (min-width: 30em){
+    body {
+        font-size:105%;
+    }
+}
+
+@media (min-width: 54em){
+    body {
+        font-size:107.5%;
+    }
+}
+
+@media (min-width: 64em){
+    body {
+        font-size:110%;
+    }
+}
+
+@media (min-width: 76.5em){
+    body {
+        font-size:115%;
+    }
+}
+
+@media (min-width: 114em){
+    body {
+        font-size:125%;
+    }
+}
+
+/* ---------------------------------------------------------------- */
+
+.post {
+    min-width: 100vh;
+    width: 100%;
+    border: 0.5em solid #ffffff;
+}
+
+/* -----------------------Break Point---------------------------- */
+
+@media (min-width: 54em){
+    .post {
+        display: flex;
+        height: 100vh;
+        min-height:40em;
+    }
+}
+
+.post > *:first-child {
+    position: relative;
+    height: 14em;
+    background-color: #000000;
+}
+
+@media (min-width: 30em) {
+    .post > *:first-child {
+        height: 18em;
+    }
+}
+
+@media (min-width: 54em) {
+    .post > *:first-child {
+        flex-basis: 50%;
+        max-width: 50%;
+        height: auto;
+    }
+}
+
+@media (min-width: 76.5em) {
+    .post > *:first-child {
+        flex-basis: 60%;
+        max-width: 60%;
+    }
+}
+
+@media (min-width: 54em) {
+    .post > *:last-child {
+        flex-basis: 50%;
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 76.5em) {
+    .post > *:last-child {
+        flex-basis: 40%;
+        max-width: 40%;
+    }
+}
+
+/* ---------------------------------------------------------------- */
+
+.post-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2em;
+    overflow: auto;
+}
+
+.post-time {
+    position: relative;
+    font-weight: 600;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    overflow: hidden;
+    -webkit-animation: fadeInUp 0.8s ease-in-out; /* Chrome, Safari, Opera */
+    animation: fadeInUp 0.8s ease-in-out;
+}
+
+.post-content {
+    padding: 2em 0;
+}
+
+@media (min-width: 54em) {
+    .post-content {
+        padding: 0 4em;
+    }
+}
+
+.post-header {
+    overflow: hidden;
+}
+
+.post-header span {
+    display: inline-block;
+    -webkit-animation: fadeInUp 0.8s ease-in-out; /* Chrome, Safari, Opera */
+    animation: fadeInUp 0.8s ease-in-out;
+}
+
+.post-text {
+    font-height: 300;
+    -webkit-animation: fadeInDown 0.8s ease-in-out; /* Chrome, Safari, Opera */
+    animation: fadeInDown 0.8s ease-in-out;
+}
+
+.post-link {
+    text-align: right;
+}
+
+.absolute-bg {
+    background-image: url("author.jpg");
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    -webkit-animation: fadeInRight 0.8s ease-in-out; /* Chrome, Safari, Opera */
+    animation: fadeInRight 0.8s ease-in-out;
+}
+
+
+.fadeinDown {
+    -webkit-animation: fadeInDown 500ms ease-in-out; /* Chrome, Safari, Opera */
+    animation: fadeInDown 500ms ease-in-out;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-40px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+
+/* Standard syntax */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeinUp {
+    -webkit-animation: fadeInUp 500ms ease-in-out; /* Chrome, Safari, Opera */
+    animation: fadeInUp 500ms ease-in-out;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+
+/* Standard syntax */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeInRight {
+    -webkit-animation: fadeInRight 500ms ease-in-out; /* Chrome, Safari, Opera */
+    animation: fadeInRight 500ms ease-in-out;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-80px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+
+/* Standard syntax */
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
